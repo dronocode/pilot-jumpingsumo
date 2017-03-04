@@ -1,0 +1,12 @@
+---
+- name: install daemontools
+  hosts: servers
+  tasks:
+    - name: download
+      get_url:
+        url:     "http://djbware.csi.hu/RPMS/daemontools-0.76-112memphis.i386.rpm"
+        dest:    "/root/daemontools.rpm"
+    - name: install
+      yum:
+        name: /root/daemontools.rpm
+        state: present
