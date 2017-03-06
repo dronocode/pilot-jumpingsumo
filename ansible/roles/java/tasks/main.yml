@@ -1,0 +1,8 @@
+---
+- get_url:
+    url:     "{{ java_url }}"
+    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+    dest:    /root/jdk-{{java_version}}-linux-x64.rpm
+- yum:
+    name: /root/jdk-{{java_version}}-linux-x64.rpm
+    state: present

@@ -1,0 +1,4 @@
+java_url: http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm
+java_version: 8u121
+spark_url: http://www-us.apache.org/dist/spark/spark-2.1.0/spark-2.1.0-bin-hadoop2.7.tgz
+spark_version: 2.1.0-bin-hadoop2.7

@@ -1,0 +1,1 @@
+javaOptions in (test, run) += "-Dpilot.hadoop=hdfs://spark1.sciabarra.net/user/msciab"

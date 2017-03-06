@@ -8,8 +8,6 @@ scalaVersion := "2.12.1"
 
 resolvers += Resolver.mavenLocal
 
-//libraryDependencies += "com.pragone" % "jpHash" % "1.0-SNAPSHOT"
-
 libraryDependencies += "de.devoxx4kids" % "dronecontroller" % "0.2.0a"
 
 libraryDependencies ++= Seq(
@@ -23,4 +21,9 @@ libraryDependencies ++= Seq(
   "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.5" % "test;compile"
 )
 
-fork in (Test, run) := true
+// https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-client
+libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.7.3"
+
+fork in Test := true
+
+fork in Runtime := true

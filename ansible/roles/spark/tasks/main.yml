@@ -1,0 +1,12 @@
+- get_url:
+    url:     "{{ spark_url }}"
+    dest:    "/root/spark-{{spark_version}}.tar.gz"
+- unarchive:
+    copy: no
+    src: "/root/spark-{{spark_version}}.tar.gz"
+    dest: "/opt"
+    creates: "/opt/spark-{{spark_version}}"
+- file:
+    src: "/opt/spark-{{spark_version}}"
+    dest: "/opt/spark"
+    state: link
