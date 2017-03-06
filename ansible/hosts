@@ -2,3 +2,10 @@
 spark1.sciabarra.net
 spark2.sciabarra.net
 spark3.sciabarra.net
+[spark-master]
+spark2.sciabarra.net
+[spark-slave]
+spark1.sciabarra.net
+spark3.sciabarra.net
+[zeppelin]
+spark1.sciabarra.net
