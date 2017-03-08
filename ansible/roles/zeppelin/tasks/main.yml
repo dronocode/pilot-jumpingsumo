@@ -1,11 +1,13 @@
 ---
-- name: install zeppelin
-  hosts: zeppelin
-  tasks:
-    - get_url:
-        url: http://www-us.apache.org/dist/zeppelin/zeppelin-0.7.0/zeppelin-0.7.0-bin-all.tgz
-        dest: /root/zeppelin.tar.gz
-    - unarchive:
-        copy: no
-        src: /root/zeppelin.tar.gz
-        dest: /opt
+- get_url:
+    url: "{{ zeppelin_url }}"
+    dest: /root/zeppelin-{{zeppelin_version}}-bin-all.tar.gz
+- unarchive:
+    copy: no
+    src: /root/zeppelin-{{zeppelin_version}}-bin-all.tar.gz
+    dest:  /opt
+    creates: /opt/zeppelin-{{zeppelin_version}}-bin-all
+- file:
+    src: "/opt/zeppelin-{{zeppelin_version}}-bin-all"
+    dest: "/opt/zeppelin"
+    state: link

@@ -2,3 +2,6 @@
   roles:
     - java
     - spark
+- hosts: zeppelin
+  roles:
+     - zeppelin

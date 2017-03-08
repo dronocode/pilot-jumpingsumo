@@ -10,3 +10,12 @@
     src: "/opt/spark-{{spark_version}}"
     dest: "/opt/spark"
     state: link
+- template: src=spark-master.service dest=/lib/systemd/system/spark.service mode=644
+  notify:
+    - reload systemd
+  when: spark_master
+- template: src=spark-slave.service dest=/lib/systemd/system/spark.service mode=644
+  notify:
+    - reload systemd
+  when: not spark_master
+- service: name=spark.service state=started enabled=yes

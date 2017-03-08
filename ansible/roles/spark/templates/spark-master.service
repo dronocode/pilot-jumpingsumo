@@ -1,0 +1,13 @@
+[Unit]
+Description=Spark Master
+Requires=network.target
+After=network.target
+[Service]
+Type=forking
+ExecStart=/opt/spark/sbin/start-master.sh
+ExecStop=/opt/spark/sbin/stop-master.sh
+User=root
+PIDFile=/var/run/spark-root-org.apache.spark.deploy.master.Master-1.pid
+Environment="SPARK_PID_DIR=/var/run"
+[Install]
+WantedBy=multi-user.target
