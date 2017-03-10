@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<!-- no s3 for now
+  <property>
+    <name>zeppelin.notebook.s3.user</name>
+    <value>username</value>
+    <description>{{zeppelin_s3_user}}</description>
+  </property>
+  <property>
+    <name>zeppelin.notebook.s3.bucket</name>
+    <value>bucket_name</value>
+    <description>{{zeppelin_s3_bucket}}</description>
+  </property>
+  <property>
+    <name>zeppelin.notebook.storage</name>
+    <value>org.apache.zeppelin.notebook.repo.S3NotebookRepo</value>
+    <description>notebook persistence layer implementation</description>
+  </property>
+-->
+</configuration>

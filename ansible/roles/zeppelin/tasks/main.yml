@@ -11,3 +11,16 @@
     src: "/opt/zeppelin-{{zeppelin_version}}-bin-all"
     dest: "/opt/zeppelin"
     state: link
+- template:
+    src: zeppelin.service
+    dest: /lib/systemd/system/zeppelin.service
+    mode: 644
+- template:
+    src: zeppelin-site.xml
+    dest: /opt/zeppelin/conf/zeppelin-site.xml
+    mode: 644
+- template:
+    src: zeppelin-env.sh
+    dest: /opt/zeppelin/conf/zeppelin-env.sh
+    mode: 644
+- service: name=zeppelin.service state=started enabled=yes
