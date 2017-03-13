@@ -2,6 +2,7 @@
   roles:
     - java
     - spark
+    - firewall
 - hosts: zeppelin
   roles:
      - zeppelin
