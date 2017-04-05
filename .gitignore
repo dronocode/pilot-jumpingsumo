@@ -3,3 +3,4 @@ target/
 logs/
 config.sbt
 ansible/password
+*.retry

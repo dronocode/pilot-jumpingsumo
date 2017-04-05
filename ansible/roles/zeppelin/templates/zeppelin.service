@@ -1,12 +1,8 @@
 [Unit]
 Description=Zeppelin Service
-Requires=network.target
-After=network.target
+
 [Service]
-Type=forking
-ExecStart=/opt/zeppelin/bin/zeppelin-daemon.sh start
-ExecStop=/opt/zeppelin/bin/zeppelin-daemon.sh stop
-User=root
-PIDFile=/opt/zeppelin/run/zeppelin-root-{{inventory_hostname}}.pid
+ExecStart=/opt/zeppelin/bin/zeppelin.sh
+
 [Install]
 WantedBy=multi-user.target

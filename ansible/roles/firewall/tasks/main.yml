@@ -4,28 +4,28 @@
 
 - firewalld:
    port: 23-65535/tcp
-   permanent: true
+   source: 0.0.0.0/0
    state: disabled
+   permanent: yes
    immediate: yes
 
 - firewalld:
    port: 23-65535/tcp
    source: 172.93.54.0/24
-   permanent: true
    state: enabled
+   permanent: yes
    immediate: yes
 
 - firewalld:
    port: 8080-8081/tcp
-   source: 93.41.96.136
-   permanent: true
+   source: 93.41.96.136/32
    state: enabled
+   permanent: yes
    immediate: yes
 
 - firewalld:
    port: 8080-8081/tcp
    source: 79.7.155.229
-   permanent: true
    state: enabled
+   permanent: yes
    immediate: yes
-
